@@ -2,3 +2,9 @@ body {
     font-family: 'Times New Roman', Times, serif;
     font-size: large;
 }
+
+
+#everything {
+    margin-right: 8%;
+    margin-left: 8%;
+}
