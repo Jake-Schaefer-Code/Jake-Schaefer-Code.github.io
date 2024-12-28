@@ -7,7 +7,14 @@ body {
 
 body .container,
 body .container-fluid {
-  max-width: 10px;
+  max-width: 1080px;
+}
+
+body .row {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .home-wrapper .description {
