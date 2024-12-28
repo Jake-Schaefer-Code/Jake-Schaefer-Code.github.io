@@ -1,25 +1,83 @@
+:root {
+    --sidebar-size: 200px;
+    --text-color: #555;
+}
+
 body {
     font-family: 'Times New Roman', Times, serif;
     font-size: large;
-    color: black;
+    color: #353232;
     background: white;
 }
 
 body .container,
 body .container-fluid {
-  max-width: 1080px;
-}
 
-body .row {
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
+  margin-left: 0px;
+  padding: 1% 1%;
 }
 
 .home-wrapper .description {
     margin-top: 30px;
   }
+
+.main {
+    margin-left: var(--sidebar-size);
+    padding: 1% 1%;
+}
+
+
+.icon {
+    color: var(--text-color)
+}
+  
+.sidebar {
+    margin: 0;
+    padding: 1% 1%;
+    width: var(--sidebar-size);
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+}
+  
+/* Active/current link */
+.sidebar a.active {
+    background-color: var(--text-color);
+    color: white;
+}
+  
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+  
+@media screen and (max-width: 700px) {
+.sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.main {
+    margin-left: 0;
+}
+.sidebar a {float: left;}
+div.content {margin-left: 0;}
+}
+  
+@media screen and (max-width: 400px) {
+.sidebar a {
+    text-align: center;
+    float: none;
+}
+}
   
 
 #everything {
