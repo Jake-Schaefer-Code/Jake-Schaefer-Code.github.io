@@ -26,9 +26,9 @@ body .container-fluid {
     padding: 1% 1%;
 }
 
-
 .icon {
-    color: var(--text-color)
+    color: var(--text-color);
+    padding-right: 5%;
 }
   
 .sidebar {
@@ -42,7 +42,7 @@ body .container-fluid {
 
 .sidebar a {
     display: block;
-    color: black;
+    color: var(--text-color);
     padding: 16px;
     text-decoration: none;
 }
@@ -53,12 +53,18 @@ body .container-fluid {
     color: white;
 }
   
-/* Links on mouse-over */
-.sidebar a:hover:not(.active) {
-    background-color: #555;
+
+.sidebar a:hover:not(.active),
+.sidebar a:hover:not(.active) .icon {
+    background-color: var(--text-color);
     color: white;
 }
-  
+
+.sidebar a:hover:not(.active) {
+    text-decoration: underline;
+}
+
+
 @media screen and (max-width: 700px) {
 .sidebar {
     width: 100%;
