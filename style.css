@@ -1,29 +1,66 @@
 :root {
     --sidebar-size: 200px;
+    --navbar-size: 1em;
     --text-color: #555;
+
 }
 
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: large;
-    color: #353232;
+    color: var(--text-color);
     background: white;
 }
 
+
 body .container,
 body .container-fluid {
-
-  margin-left: 0px;
-  padding: 1% 1%;
+    margin-top: 0px;
+    margin-left: 0px;
+    padding: 1% 1%;
 }
+
+
+.topnav {
+    position: fixed;
+    overflow: hidden;
+    /* height: var(--navbar-size); */
+    display: block;
+    background-color: black;
+    margin-top: calc(var(--navbar-size)*-1);
+}
+.topnav a {
+    float: left;
+    color: var(--text-color);
+    
+    text-align: center;
+    padding: 0px 2em;
+    text-decoration: none;
+}
+.topnav a.navhead {
+    font-weight: bold;
+}
+
 
 .home-wrapper .description {
     margin-top: 30px;
-  }
+}
 
 .main {
+    margin-top: var(--navbar-size);
     margin-left: var(--sidebar-size);
     padding: 1% 1%;
+}
+
+.main ul {
+    display: block;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.section {
+    position: relative;
+    scroll-margin-top: var(--navbar-size);
 }
 
 .icon {
@@ -31,8 +68,16 @@ body .container-fluid {
     padding-right: 5%;
 }
   
+
+.divider {
+    /* flex-grow: 1; */
+    border-bottom: 0px solid black;
+    /* margin: 5px */
+  }
+
+
 .sidebar {
-    margin: 0;
+    margin-top: var(--navbar-size);
     padding: 1% 1%;
     width: var(--sidebar-size);
     position: fixed;
@@ -40,12 +85,20 @@ body .container-fluid {
     overflow: auto;
 }
 
-.sidebar a {
-    display: block;
-    color: var(--text-color);
+.sidebar h1 {
+    font-weight: bold;
+    font-size: 1.25em;
     padding: 16px;
     text-decoration: none;
 }
+
+.sidebar a {
+    display: block;
+    color: var(--text-color);
+    padding: 0.5em 1em;
+    text-decoration: none;
+}
+
   
 /* Active/current link */
 .sidebar a.active {
